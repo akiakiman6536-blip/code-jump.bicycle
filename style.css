@@ -1,0 +1,176 @@
+/* PC、スマホ共通スタイル */
+* {
+  box-sizing: border-box;
+}
+p {
+  font-size: 15px;
+}
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
+}
+
+ /* 共通のコンテンツ幅 */
+ .container {
+  max-width: 960px;
+  padding: 0 4%;
+  margin: 0 auto;
+}
+
+/* ヘッダー専用の横並び */
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ヘッダー */
+
+ #logo img {
+   width: 100px;
+   height: auto;
+ }
+
+/* ナビゲーションのレイアウト */
+ #nav-pc {
+   font-size: 16px;
+ } 
+ #nav-pc ul {
+   display: flex;
+   padding-left: 0;
+ }
+ #nav-pc li {
+   list-style: none;
+ } 
+ /* ナビゲーションのリンクの装飾設定 */
+ #nav-pc a {
+   text-decoration: none;
+   margin-left: 20px;
+   color: #0d0d0d;
+ }
+  #nav-pc a:hover {
+   opacity: 0.5;
+ }
+ 
+/* メインビジュアル*/
+ #main-visual {
+   margin: 0 auto 60px auto;
+   
+ }
+
+ #main-visual > img {
+   width: 100%;
+   height: 600px;
+   max-width: 1920px;
+   top: 0;
+   right: 0;
+ }
+
+ /*About*/
+ 
+.index-h2 {
+    font-size: 30px;
+    text-align: center;
+    text-decoration: underline;
+}
+.about-inner {
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+   
+}
+
+#about-photo > img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 30px;
+ 
+}
+#about-message {
+  text-align: left;
+}
+#about-message h3 {
+  font-size: 24px;
+}
+
+/*Bicycle*/
+#bicycle {
+  margin: 100px auto 0px auto;
+}
+
+.bicycle-inner {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto 0 auto;
+  width: 100%;
+}
+.bicycle-inner > div {
+  width: 30%;
+  margin: 0;
+}
+.bicycle-photo {
+  width: 100%;
+  display: block;
+}
+.bicycle-inner p {
+  font-size: 18px;
+}
+
+/*フッター*/
+footer p {
+  text-align: center;
+  font-size: 18px;
+}
+
+/** スマホ用スタイル */
+@media screen and (max-width: 767px) {
+  /*ヘッダー*/
+  #nav-pc ul {
+   display: flex;
+   justify-content: space-between;
+   margin: 30px 10px 30px 10px;
+ }
+  #nav-pc a {
+   font-size: 24px;
+  }
+
+  /* メインビジュアル */
+  #main-visual {
+    height: calc(100vh - 60px);
+    overflow: hidden;
+  }
+
+  #main-visual > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+ /* about */
+ .about-inner {
+   flex-direction: column;
+   align-items: center;
+ }
+ #about-photo {
+  width: 100% ;
+  margin-right: 0 ;
+  text-align: center;
+ }
+ #about-message > div {
+  margin: 0 20px 0 20px;
+ }
+ 
+ /* bicycle */
+ .bicycle-inner {
+  flex-direction: column;
+ }
+ .bicycle-inner > div {
+  width: auto;
+  margin: 0 10px 30px 10px;
+ }
+ .bicycle-photo {
+  width: 100%;
+ }
+  
+}
